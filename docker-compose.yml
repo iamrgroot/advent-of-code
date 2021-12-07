@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  go:
+    container_name: go
+    image: golang:alpine
+    restart: unless-stopped
+    command: "tail -f /dev/null"
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+    working_dir: /app
