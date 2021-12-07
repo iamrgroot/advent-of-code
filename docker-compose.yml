@@ -3,7 +3,7 @@ version: '3.9'
 services:
   go:
     container_name: go
-    image: golang:alpine
+    image: golang:1.17-alpine
     restart: unless-stopped
     command: "tail -f /dev/null"
     volumes:

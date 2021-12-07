@@ -7,7 +7,7 @@ import (
 )
 
 func Read(path string) string {
-	content, error := os.ReadFile("day-1/input.txt")
+	content, error := os.ReadFile(path)
 
 	if error != nil {
 		panic(error)
