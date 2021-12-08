@@ -16,4 +16,8 @@ docker-compose exec go ash
 
 ```
 go run day-1/main.go
+go run day-2/main.go
+go run day-3/main.go
+go run day-4/main.go
+go run day-5/main.go
 ```
