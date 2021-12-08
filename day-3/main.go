@@ -9,7 +9,7 @@ import (
 
 func main() {
 	input := shared.Read("day-3/input.txt")
-	lines := shared.ToIntList(input, shared.BinaryStrToInt)
+	lines := shared.ToIntList(input, shared.BinaryStrToInt, "\n")
 
 	firstLine := strings.Split(input, "\n")[0]
 	digits := len(firstLine)

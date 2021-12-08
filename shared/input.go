@@ -16,14 +16,14 @@ func Read(path string) string {
 	return string(content)
 }
 
-func ToIntList(input string, convertClosure func(string) (int, error)) []int {
+func ToIntList(input string, convertClosure func(string) (int, error), split string) []int {
 	var list []int
 
-	for _, line := range strings.Split(input, "\n") {
+	for _, line := range strings.Split(input, split) {
 		number, error := convertClosure(line)
 
 		if error != nil {
-			panic(error)
+			continue
 		}
 
 		list = append(list, number)

@@ -9,7 +9,7 @@ import (
 
 func main() {
 	input := shared.Read("day-1/input.txt")
-	lines := shared.ToIntList(input, strconv.Atoi)
+	lines := shared.ToIntList(input, strconv.Atoi, "\n")
 
 	var count1 int
 	var count2 int
