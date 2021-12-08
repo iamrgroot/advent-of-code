@@ -16,11 +16,11 @@ func Read(path string) string {
 	return string(content)
 }
 
-func ToIntList(input string) []int {
+func ToIntList(input string, convertClosure func(string) (int, error)) []int {
 	var list []int
 
 	for _, line := range strings.Split(input, "\n") {
-		number, error := strconv.Atoi(line)
+		number, error := convertClosure(line)
 
 		if error != nil {
 			panic(error)
@@ -30,4 +30,18 @@ func ToIntList(input string) []int {
 	}
 
 	return list
+}
+
+func BinaryStrToInt(binary string) (int, error) {
+	integer, error := strconv.ParseInt(binary, 2, 32)
+
+	return int(integer), error
+}
+
+func Copy(source []int) []int {
+	copySlice := make([]int, len(source))
+
+	copy(copySlice, source)
+
+	return copySlice
 }

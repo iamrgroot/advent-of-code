@@ -4,11 +4,12 @@ import (
 	"adventOfCode/shared"
 	"fmt"
 	"math"
+	"strconv"
 )
 
 func main() {
 	input := shared.Read("day-1/input.txt")
-	lines := shared.ToIntList(input)
+	lines := shared.ToIntList(input, strconv.Atoi)
 
 	var count1 int
 	var count2 int
